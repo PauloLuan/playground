@@ -1,3 +1,3 @@
 export { default as theme } from './lib/Theme'
 export * from './lib/CSSReset'
-export * from './lib/Logo'
+export * from './lib/components/Example'

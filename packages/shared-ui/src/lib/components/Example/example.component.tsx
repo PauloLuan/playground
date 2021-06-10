@@ -1,11 +1,11 @@
-import * as S from './logo.styles'
+import * as S from './example.styles'
 
-export interface LogoProps {
+export interface ExampleProps {
   color?: 'lightGray' | 'primary'
   testId?: string
 }
 
-export const Logo = ({ color = 'lightGray', testId = 'Logo' }: LogoProps) => {
+export const Example = ({ color = 'lightGray', testId = 'Example' }: ExampleProps) => {
   return (
     <S.Container>
       <S.Wrapper color={color} data-testid={testId}>
