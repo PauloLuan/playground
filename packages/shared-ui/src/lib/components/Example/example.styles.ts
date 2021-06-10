@@ -10,7 +10,7 @@ export const Container = styled.div<ExampleProps>`
 `
 
 export const Wrapper = styled.div<ExampleProps>`
-  ${({ theme, color }) => css`
+  ${({ theme, color = 'primary' }) => css`
     background-color: ${theme.colors[color]};
   `}
 `

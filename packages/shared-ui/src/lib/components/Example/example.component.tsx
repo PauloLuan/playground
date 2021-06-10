@@ -5,7 +5,10 @@ export interface ExampleProps {
   testId?: string
 }
 
-export const Example = ({ color = 'lightGray', testId = 'Example' }: ExampleProps) => {
+export const Example = ({
+  color = 'lightGray',
+  testId = 'Example'
+}: ExampleProps) => {
   return (
     <S.Container>
       <S.Wrapper color={color} data-testid={testId}>
