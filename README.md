@@ -9,7 +9,7 @@
 <p align="center">
     <a href="https://github.com/PauloLuan/playground/actions/workflows/ci.yml"><img src="https://img.shields.io/github/workflow/status/pauloluan/playground/ci?style=for-the-badge"></a>
     <a href="https://pt-br.reactjs.org/"><img src="https://img.shields.io/badge/ReactJS-17.x-blue?style=for-the-badge"></a>
-    <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node-14.x-green?style=for-the-badge"></a>
+    <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node-16.x-green?style=for-the-badge"></a>
 </p>
 
 [![Dependency Status][daviddm-image]][daviddm-url] [![standard][standard-image]][standard-url] [![forthebadge][itworks-image]][itworks-url]
