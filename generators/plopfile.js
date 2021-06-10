@@ -11,7 +11,7 @@ module.exports = (plop) => {
     actions: [
       {
         type: 'add',
-        path: '../packages/shared-ui/src/lib/components/{{pascalCase name}}/{{pascalCase name}}.index.ts',
+        path: '../packages/shared-ui/src/lib/components/{{pascalCase name}}/index.ts',
         templateFile: 'templates/component/index.ts.hbs'
       },
       {
