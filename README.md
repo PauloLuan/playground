@@ -11,16 +11,6 @@
     <a href="https://pt-br.reactjs.org/"><img src="https://img.shields.io/badge/ReactJS-17.x-blue?style=for-the-badge"></a>
     <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/Node-16.x-green?style=for-the-badge"></a>
 </p>
-
-[![Dependency Status][daviddm-image]][daviddm-url] [![standard][standard-image]][standard-url] [![forthebadge][itworks-image]][itworks-url]
-
-[daviddm-image]: https://img.shields.io/david/pauloluan/playground.svg?style=for-the-badge
-[daviddm-url]: https://david-dm.org/pauloluan/playground
-[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=for-the-badge
-[standard-url]: http://npm.im/standard
-[itworks-image]: https://forthebadge.com/images/badges/it-works-why.svg
-[itworks-url]: https://forthebadge.com
-
 ## 💡 Introduction
 
 PauloLuan Playground-monorepo
@@ -60,5 +50,14 @@ $ yarn test
 ```
 
 For more commands please checkout the scripts section on `package.json`
+
+[![Dependency Status][daviddm-image]][daviddm-url] [![standard][standard-image]][standard-url] [![forthebadge][itworks-image]][itworks-url]
+
+[daviddm-image]: https://img.shields.io/david/pauloluan/playground.svg?style=for-the-badge
+[daviddm-url]: https://david-dm.org/pauloluan/playground
+[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=for-the-badge
+[standard-url]: http://npm.im/standard
+[itworks-image]: https://forthebadge.com/images/badges/it-works-why.svg
+[itworks-url]: https://forthebadge.com
 
 [🔝 back to top](#top)
