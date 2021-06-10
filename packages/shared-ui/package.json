@@ -1,0 +1,26 @@
+{
+  "name": "@pauloluan/shared-ui",
+  "private": true,
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build:types": "tsc --project tsconfig.build.json",
+    "build:lib": "rollup -c",
+    "build": "yarn build:types && yarn build:lib",
+    "dev": "rollup -c -w",
+    "test": "yarn jest --maxWorkers=50%",
+    "test:watch": "yarn jest --watch --maxWorkers=25%"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "styled-components": "^5.3.0",
+    "styled-icons": "^10.34.0",
+    "styled-media-query": "^2.1.2"
+  }
+}
