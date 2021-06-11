@@ -1,3 +1,3 @@
-export { default as theme } from './lib/Theme'
+export * from './lib/components/Sidebar'
 export * from './lib/CSSReset'
-export * from './lib/components/Example'
+export { default as theme } from './lib/Theme'
