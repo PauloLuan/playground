@@ -96,6 +96,7 @@
     "npm-check-updates": "^11.6.0",
     "plop": "^2.7.4",
     "prettier": "2.3.1",
+    "react-icons": "^4.2.0",
     "rollup": "^2.51.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-typescript": "^1.0.1",
