@@ -52,13 +52,19 @@ $ yarn test
 
 For more commands please checkout the scripts section on `package.json`
 
-[![Dependency Status][daviddm-image]][daviddm-url] [![standard][standard-image]][standard-url] [![forthebadge][itworks-image]][itworks-url]
+[![travis-image][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![standard][standard-image]][standard-url] [![forthebadge][itworks-image]][itworks-url]
 
+[travis-image]: https://img.shields.io/travis/pauloluan/playground/master.svg?style=for-the-badge
+[travis-url]: https://travis-ci.com/pauloluan/playground
 [daviddm-image]: https://img.shields.io/david/pauloluan/playground.svg?style=for-the-badge
 [daviddm-url]: https://david-dm.org/pauloluan/playground
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=for-the-badge
 [standard-url]: http://npm.im/standard
 [itworks-image]: https://forthebadge.com/images/badges/it-works-why.svg
 [itworks-url]: https://forthebadge.com
+
+# Where you can find me? :man_technologist:
+
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://bit.ly/pauloluan)](https://bit.ly/pauloluan)
 
 [🔝 back to top](#top)
