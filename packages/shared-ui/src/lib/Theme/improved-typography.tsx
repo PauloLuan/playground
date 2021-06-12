@@ -1,4 +1,27 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
+
+export const ImprovedTypography = createGlobalStyle`
+  ${({ theme }) => css`
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      &:before,
+      &:after {
+        box-sizing: inherit;
+      }
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.sizes.medium};
+    }
+  `}
+`
 
 export const TypographyStyles = createGlobalStyle`
   :root {
