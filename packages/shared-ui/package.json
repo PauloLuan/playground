@@ -15,7 +15,9 @@
     "build": "yarn build:types && yarn build:lib",
     "dev": "rollup -c -w",
     "test": "yarn jest --maxWorkers=50%",
-    "test:watch": "yarn jest --watch --maxWorkers=25%"
+    "test:watch": "yarn jest --watch --maxWorkers=25%",
+    "test:e2e": "yarn cypress open-ct",
+    "test:e2e:ci": "yarn cypress run-ct"
   },
   "peerDependencies": {
     "react": "^17.0.2",
