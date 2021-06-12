@@ -24,5 +24,10 @@
       ]
     }
   },
-  "include": ["./src"]
+  "include": ["./src"],
+  "exclude": [
+    "dist",
+    "**/*.spec*",
+    "**/*.e2e*"
+  ]
 }

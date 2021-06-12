@@ -13,7 +13,7 @@
     "dev": "lerna run dev --stream --parallel",
     "start": "lerna run start --stream",
     "format": "eslint --fix packages --ext .js,.jsx,.ts,.tsx",
-    "test": "lerna run --parallel test test:e2e:ci",
+    "test": "lerna run --parallel test",
     "test:watch": "lerna run --parallel test:watch",
     "test:e2e:ci": "lerna run --parallel test:e2e:ci",
     "deps:upgrade": "yarn sort-package-json && yarn npm-check-updates -u",
