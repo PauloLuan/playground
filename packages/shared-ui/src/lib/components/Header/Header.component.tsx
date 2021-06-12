@@ -1,27 +1,16 @@
 import * as S from './Header.styles'
 
 export interface HeaderProps {
+  color?: 'lightGray' | 'primary'
   testId?: string
 }
 
-export const Header = ({ testId = 'Header' }: HeaderProps) => {
+export const Header = ({ color = 'lightGray', testId = 'Header' }: HeaderProps) => {
   return (
     <S.Container>
-      <S.Nav data-testid={testId}>
-        <S.LogoContainer>
-          <S.Logo />
-        </S.LogoContainer>
-
-        <S.NavigationContainer>
-          <S.NavigationLink />
-          <S.NavigationLink />
-          <S.NavigationLink />
-        </S.NavigationContainer>
-
-        <S.CallToActionContainer>
-          <S.ActionButton></S.ActionButton>
-        </S.CallToActionContainer>
-      </S.Nav>
+      <S.Wrapper color={color} data-testid={testId}>
+        <S.Header>Paulo Luan é o brabo</S.Header>
+      </S.Wrapper>
     </S.Container>
   )
 }

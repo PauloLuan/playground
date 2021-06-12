@@ -1,14 +1,19 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-export const Container = styled.div``
-export const Nav = styled.div``
-export const LogoContainer = styled.div``
-export const Logo = styled.div``
-export const NavigationContainer = styled.div``
-export const NavigationLink = styled.div``
-export const CallToActionContainer = styled.div``
-export const ActionButton = styled.button``
+import { HeaderProps } from '.'
 
+export const Container = styled.div<HeaderProps>`
+  ${({ theme, color }) => css`
+    height: 100px;
+    width: 100px;
+  `}
+`
+
+export const Wrapper = styled.div<HeaderProps>`
+  ${({ theme, color }) => css`
+    background-color: ${theme.colors[color]};
+  `}
+`
 export const Header = styled.h1`
   color: red;
 `
