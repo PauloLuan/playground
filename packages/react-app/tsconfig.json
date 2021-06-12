@@ -16,13 +16,11 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "compilerOptions": {
-      "types": [
-        "cypress",
-        "@testing-library/cypress",
-        "@testing-library/react"
-      ]
-    }
+    "types": [
+      "cypress",
+      "@testing-library/cypress",
+      "@testing-library/react"
+    ]
   },
   "include": ["./src"],
   "exclude": [
