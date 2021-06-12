@@ -13,7 +13,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "compilerOptions": {
+      "types": [
+        "cypress",
+        "@testing-library/cypress",
+        "@testing-library/react"
+      ]
+    }
   },
   "include": [
     "packages",

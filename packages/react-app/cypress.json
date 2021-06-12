@@ -1,5 +1,5 @@
 {
-  "experimentalNetworkStubbing": true,
+  "experimentalStudio": true,
   "video": false,
   "component": {
     "testFiles": "**/*e2e.{js,ts,jsx,tsx}",
