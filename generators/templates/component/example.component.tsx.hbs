@@ -1,14 +1,13 @@
 import * as S from './{{pascalCase name}}.styles'
 
 export interface {{properCase name}}Props {
-  color?: 'lightGray' | 'primary'
   testId?: string
 }
 
-export const {{properCase name}} = ({ color = 'lightGray', testId = '{{properCase name}}' }: {{properCase name}}Props) => {
+export const {{properCase name}} = ({ testId = '{{properCase name}}' }: {{properCase name}}Props) => {
   return (
     <S.Container>
-      <S.Wrapper color={color} data-testid={testId}>
+      <S.Wrapper data-testid={testId}>
         <S.Header>Paulo Luan é o brabo</S.Header>
       </S.Wrapper>
     </S.Container>
