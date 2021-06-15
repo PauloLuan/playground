@@ -18,7 +18,9 @@
     "test:e2e:ci": "lerna run --parallel test:e2e:ci",
     "deps:upgrade": "yarn sort-package-json && yarn npm-check-updates -u",
     "prestorybook": "rimraf node_modules/.cache/storybook",
-    "storybook": "start-storybook -p 6006"
+    "start:shared-ui": "lerna run --scope @pauloluan/shared-ui dev",
+    "start:storybook": "start-storybook -p 6006",
+    "storybook": "concurrently \"yarn start:storybook\" \"yarn start:shared-ui\""
   },
   "browserslist": {
     "production": [
@@ -88,6 +90,7 @@
     "@typescript-eslint/parser": "^4.26.1",
     "@vitejs/plugin-react-refresh": "^1.3.3",
     "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.0",
     "cypress": "^7.5.0",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
