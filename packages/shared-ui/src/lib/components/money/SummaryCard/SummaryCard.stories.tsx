@@ -5,11 +5,14 @@ export default {
   title: 'money/SummaryCard',
   component: SummaryCard,
   args: {
-    color: 'black',
     size: 'large'
   }
 } as Meta
 
-export const Default: Story<SummaryCardProps> = (args) => (
-  <SummaryCard {...args} />
+export const IncomeSummary: Story<SummaryCardProps> = (args) => (
+  <SummaryCard {...args} type="income" />
+)
+
+export const OutcomeSummary: Story<SummaryCardProps> = (args) => (
+  <SummaryCard {...args} type="outcome" />
 )
