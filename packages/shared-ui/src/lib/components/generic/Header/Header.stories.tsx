@@ -5,7 +5,6 @@ export default {
   title: 'Components/Header',
   component: Header,
   args: {
-    color: 'black',
     size: 'large'
   }
 } as Meta
