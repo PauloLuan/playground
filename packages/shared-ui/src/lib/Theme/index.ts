@@ -8,9 +8,11 @@ export default {
   },
   font: {
     family: 'Poppins, Roboto',
+    extraLight: 100,
     light: 300,
     normal: 400,
     bold: 600,
+    extraBold: 900,
     sizes: {
       xsmall: '1.2rem',
       small: '1.4rem',
@@ -33,7 +35,15 @@ export default {
     success: '#16A34A',
     danger: '#DC2626',
     alert: '#EAB308',
-    info: '#0284C7'
+    info: '#0284C7',
+
+    mindingoBlue: '#5429CC',
+    mindingoBlueLight: '#6933FF',
+    mindingoRed: '#E52E4D',
+    mindingoTextTitle: '#363F5F',
+    mindingoTextBody: '#969CB3',
+    mindingoBackground: '#F0F2F5',
+    mindingoShape: '#FFFFFF'
   },
   spacings: {
     xxsmall: '0.8rem',
