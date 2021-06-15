@@ -1,15 +1,15 @@
 import styled, { css } from 'styled-components'
 
-import { TransactionsProps } from '.'
+import { TransactionItemProps } from '.'
 
-export const Container = styled.div<TransactionsProps>`
+export const Container = styled.div<TransactionItemProps>`
   ${({ theme, color }) => css`
     height: 100px;
     width: 500px;
   `}
 `
 
-export const Wrapper = styled.div<TransactionsProps>`
+export const Wrapper = styled.div<TransactionItemProps>`
   ${({ theme }) => css`
     background-color: red;
   `}
