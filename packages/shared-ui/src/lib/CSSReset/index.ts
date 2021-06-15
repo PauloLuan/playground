@@ -16,12 +16,27 @@ export const CSSReset = createGlobalStyle`
     }
 
     html {
-      font-size: 62.5%;
+      @media (min-width: 1080px) {
+        font-size: 97.5%; // 15px
+      }
+
+      @media (min-width: 720px) {
+        font-size: 87.5%; // 14px
+      }
     }
 
     body {
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    [disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
   `}
 `
