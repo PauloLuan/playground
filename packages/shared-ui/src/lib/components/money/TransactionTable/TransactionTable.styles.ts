@@ -13,7 +13,15 @@ export const Container = styled.div`
 
 export const Table = styled.table`
   ${({ theme }) => css`
+    width: 100%;
     border-spacing: 0 0.5rem;
+
+    th {
+      font-weight: 600;
+      text-align: left;
+      color: ${theme.colors.mindingoTextBody};
+      padding: 1rem 2rem;
+    }
 
     tr:nth-child(even) {
       background-color: ${theme.colors.gray};
