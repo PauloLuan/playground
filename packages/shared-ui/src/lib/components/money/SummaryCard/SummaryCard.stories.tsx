@@ -10,9 +10,9 @@ export default {
 } as Meta
 
 export const IncomeSummary: Story<SummaryCardProps> = (args) => (
-  <SummaryCard {...args} type="income" />
+  <SummaryCard {...args} type="income" value={954} />
 )
 
 export const OutcomeSummary: Story<SummaryCardProps> = (args) => (
-  <SummaryCard {...args} type="outcome" />
+  <SummaryCard {...args} type="outcome" value={1250} />
 )
