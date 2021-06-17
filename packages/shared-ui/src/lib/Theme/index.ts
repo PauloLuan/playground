@@ -40,6 +40,7 @@ export default {
     mindingoBlue: '#5429CC',
     mindingoBlueLight: '#6933FF',
     mindingoRed: '#E52E4D',
+    mindingoGreen: '#33CC95',
     mindingoTextTitle: '#363F5F',
     mindingoTextBody: '#969CB3',
     mindingoBackground: '#F0F2F5',

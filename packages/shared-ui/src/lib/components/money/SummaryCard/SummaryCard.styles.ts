@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { TiArrowDownThick } from 'react-icons/ti'
-import { TiArrowUpThick } from 'react-icons/ti'
+import { GiReceiveMoney, GiPayMoney } from 'react-icons/gi'
+import { MdAttachMoney } from 'react-icons/md'
 
 import { SummaryCardProps } from '.'
 type SummaryPickedProps = Pick<SummaryCardProps, 'type'>
@@ -12,10 +12,24 @@ export const Container = styled.div<SummaryPickedProps>`
     justify-content: center;
     padding: 1.5rem 2rem;
 
-    height: 400px;
+    height: 150px;
     width: 300px;
-    background: ${theme.colors.mindingoShape};
-    color: ${type === 'income' ? 'green' : 'red'};
+
+    background: ${type === 'total'
+      ? theme.colors.mindingoGreen
+      : theme.colors.mindingoShape};
+
+    color: ${() => {
+      switch (type) {
+        case 'income':
+          return theme.colors.mindingoGreen
+        case 'outcome':
+          return theme.colors.mindingoRed
+        case 'total':
+          return theme.colors.mindingoShape
+      }
+    }};
+
     border: 2px solid black;
 
     strong {
@@ -34,21 +48,24 @@ export const Header = styled.header<SummaryPickedProps>`
     justify-content: space-between;
 
     span {
-      color: ${type === 'income' ? 'green' : 'red'};
       font-size: 2rem;
       font-weight: 100;
     }
   `}
 `
 
-export const UpIcon = styled(TiArrowUpThick)`
+export const UpIcon = styled(GiReceiveMoney)`
   color: green;
   border: 2px solid;
   border-radius: 50%;
 `
 
-export const DownIcon = styled(TiArrowDownThick)`
+export const DownIcon = styled(GiPayMoney)`
   border: 2px solid red;
-  color: red;
+  border-radius: 50%;
+`
+
+export const MoneyIcon = styled(MdAttachMoney)`
+  border: 2px solid white;
   border-radius: 50%;
 `
