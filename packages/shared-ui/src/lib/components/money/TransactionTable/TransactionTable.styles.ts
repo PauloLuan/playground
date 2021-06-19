@@ -25,18 +25,17 @@ export const Table = styled.table`
 
     th {
       color: ${theme.colors.mindingoTextBody};
+      background-color: ${theme.colors.mindingoTextTitle};
       font-weight: 600;
       padding: 1rem 2rem;
       text-align: left;
 
       &:first-child {
-        background: red;
         border-radius: 10px 0 0 10px;
       }
 
       &:last-child {
         border-radius: 0 10px 10px 0;
-        background: green;
       }
     }
 
@@ -47,13 +46,12 @@ export const Table = styled.table`
       color: ${theme.colors.mindingoTextBody};
 
       &:first-child {
-        background: red;
+        color: ${theme.colors.mindingoTextTitle};
         border-radius: 10px 0 0 10px;
       }
 
       &:last-child {
         border-radius: 0 10px 10px 0;
-        background: green;
       }
     }
 
