@@ -11,9 +11,9 @@ export const Container = styled.div<SummaryPickedProps>`
     flex-direction: column;
     justify-content: center;
     padding: 1.5rem 2rem;
-
-    height: 150px;
-    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
     background: ${type === 'total'
       ? theme.colors.mindingoGreen
@@ -29,8 +29,6 @@ export const Container = styled.div<SummaryPickedProps>`
           return theme.colors.mindingoShape
       }
     }};
-
-    border: 2px solid black;
 
     strong {
       margin-top: 1rem;
