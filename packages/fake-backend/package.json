@@ -1,5 +1,5 @@
 {
-  "name": "fake-backend",
+  "name": "@pauloluan/fake-backend",
   "version": "0.0.1",
   "description": "simulates the backend app using miragejs",
   "main": "dist/index.cjs.js",

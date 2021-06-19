@@ -72,6 +72,5 @@ export default {
     }
   ],
   external: [...externals],
-  plugins,
-  inlineDynamicImports: true
+  plugins
 }
