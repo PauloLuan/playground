@@ -1,14 +1,11 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Home, Login } from '../pages'
-// import { PrivateRoute } from '../auth'
+import { Home } from '../pages'
 
 export const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/home" component={Home} />
-        {/* <PrivateRoute path="/teste" component={Protected} /> */}
+        <Route path="/" exact component={Home} />
       </Switch>
     </Router>
   )
