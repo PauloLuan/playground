@@ -65,11 +65,6 @@ export default {
       file: pkg.module,
       format: 'es',
       ...outputOptions
-    },
-    {
-      file: pkg.main,
-      format: 'cjs',
-      ...outputOptions
     }
   ],
   external: [...externals],

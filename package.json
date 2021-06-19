@@ -17,7 +17,7 @@
     "test": "lerna run --parallel test",
     "test:watch": "lerna run --parallel test:watch",
     "test:e2e:ci": "lerna run --parallel test:e2e:ci",
-    "deps:upgrade": "yarn sort-package-json && yarn npm-check-updates -u",
+    "deps:upgrade": "npx sort-package-json && npx npm-check-updates -u",
     "prestorybook": "rimraf node_modules/.cache/storybook",
     "storybook": "concurrently \"yarn start:storybook\" \"yarn start:shared-ui\"",
     "start:shared-ui": "lerna run --scope @pauloluan/shared-ui dev",
