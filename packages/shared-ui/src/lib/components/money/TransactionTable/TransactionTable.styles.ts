@@ -21,6 +21,7 @@ export const Table = styled.table`
     tr {
       background: ${theme.colors.mindingoShape};
       border-radius: 5rem;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
     }
 
     th {
