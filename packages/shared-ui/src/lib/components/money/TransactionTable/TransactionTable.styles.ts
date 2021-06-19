@@ -53,15 +53,16 @@ export const Table = styled.table`
       &:last-child {
         border-radius: 0 10px 10px 0;
       }
-    }
 
-    /*
-    tr:nth-child(even) {
-      background-color: ${theme.colors.gray};
-    }
+      &.donation {
+        color: red;
+        font-weight: 300;
+      }
 
-    tr:hover {
-      background-color: ${theme.colors.danger};
-    } */
+      &.income {
+        color: green;
+        font-weight: 300;
+      }
+    }
   `}
 `
