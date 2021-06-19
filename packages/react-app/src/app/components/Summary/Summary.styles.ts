@@ -9,6 +9,6 @@ export const Container = styled.div<SummaryProps>`
     gap: 20px;
     margin: 0 auto;
     margin-top: -50px;
-    max-width: 720px;
+    max-width: 1080px;
   `}
 `
