@@ -8,6 +8,7 @@
   "scripts": {
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "preinstall": "yarn deps:upgrade",
+    "postinstall": "yarn bootstrap",
     "bootstrap": "lerna bootstrap && yarn build",
     "build": "lerna run --stream build",
     "dev": "lerna run dev --stream --parallel",
