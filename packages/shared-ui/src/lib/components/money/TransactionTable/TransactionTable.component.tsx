@@ -11,10 +11,12 @@ export const TransactionTable = ({
     <S.Container>
       <S.Table data-testid={testId}>
         <thead>
-          <th>Name</th>
-          <th>Value</th>
-          <th>Category</th>
-          <th>Date</th>
+          <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Category</th>
+            <th>Date</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
