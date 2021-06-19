@@ -2,7 +2,8 @@
   "name": "@pauloluan/shared-ui",
   "private": true,
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "files": [
@@ -10,9 +11,7 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build:types": "tsc --project tsconfig.build.json",
-    "build:lib": "rollup -c",
-    "build": "yarn build:types && yarn build:lib",
+    "build": "rollup -c",
     "dev": "rollup -c -w",
     "test": "yarn jest --maxWorkers=50%",
     "test:watch": "yarn jest --watch --maxWorkers=25%",
