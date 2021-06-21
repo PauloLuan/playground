@@ -1,15 +1,15 @@
 import styled, { css } from 'styled-components'
 import { FcMoneyTransfer } from 'react-icons/fc'
 
-import { HeaderProps } from '.'
+// import { HeaderProps } from '.'
 
-export const Container = styled.header<HeaderProps>`
+export const Container = styled.header`
   ${({ theme }) => css`
     background-color: ${theme.colors.mindingoBlue};
   `}
 `
 
-export const Content = styled.header<HeaderProps>`
+export const Content = styled.header`
   ${({ theme }) => css`
     max-width: 1120px;
     margin: 0 auto;
@@ -28,7 +28,7 @@ export const LogoImage = styled(FcMoneyTransfer)`
   `}
 `
 
-export const Button = styled.button<HeaderProps>`
+export const Button = styled.button`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xsmall};
     color: ${theme.colors.mindingoShape};
