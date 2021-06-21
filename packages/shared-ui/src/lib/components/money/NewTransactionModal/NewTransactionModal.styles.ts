@@ -1,6 +1,5 @@
-import styled, { css, createGlobalStyle } from 'styled-components'
-
-import { NewTransactionModalProps } from '.'
+import styled, { createGlobalStyle, css } from 'styled-components'
+import { CgCloseO } from 'react-icons/cg'
 
 export const CustomTransactionModalStyles = createGlobalStyle`
   ${({ theme }) => css`
@@ -30,7 +29,7 @@ export const CustomTransactionModalStyles = createGlobalStyle`
 `
 
 export const Form = styled.div`
-  ${({ theme, color }) => css`
+  ${({ theme }) => css`
     h2 {
       color: ${theme.colors.mindingoTextTitle};
       font-size: 2rem;
@@ -78,4 +77,13 @@ export const Form = styled.div`
       }
     }
   `}
+`
+
+export const CloseButton = styled(CgCloseO)`
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
 `

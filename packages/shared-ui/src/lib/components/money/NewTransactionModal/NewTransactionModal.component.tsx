@@ -23,7 +23,7 @@ export const NewTransactionModal = ({
         overlayClassName="react-modal-overlay"
         className="react-modal-content"
       >
-        <button onClick={handleCloseModal}>x</button>
+        <S.CloseButton onClick={handleCloseModal} />
 
         <S.Form>
           <h2>New Transaction</h2>
