@@ -44,7 +44,10 @@ export default {
     mindingoTextTitle: '#363F5F',
     mindingoTextBody: '#969CB3',
     mindingoBackground: '#F0F2F5',
-    mindingoShape: '#FFFFFF'
+    mindingoShape: '#FFFFFF',
+
+    mindingoBorder: '#d7d7d7',
+    mindingoFormBackground: '#e7e9ee'
   },
   spacings: {
     xxsmall: '0.8rem',

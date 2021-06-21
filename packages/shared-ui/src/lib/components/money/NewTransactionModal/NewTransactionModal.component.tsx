@@ -13,7 +13,7 @@ export const NewTransactionModal = ({
   handleCloseModal
 }: NewTransactionModalProps) => {
   return (
-    <S.Container>
+    <>
       <S.CustomTransactionModalStyles />
       <Modal
         data-testid={testId}
@@ -25,8 +25,15 @@ export const NewTransactionModal = ({
       >
         <button onClick={handleCloseModal}>x</button>
 
-        <div>New Transaction</div>
+        <S.Form>
+          <h2>New Transaction</h2>
+          <input type="text" placeholder="Title" />
+          <input type="number" placeholder="Value" />
+          <input type="text" placeholder="Category" />
+
+          <button type="submit">Register</button>
+        </S.Form>
       </Modal>
-    </S.Container>
+    </>
   )
 }
