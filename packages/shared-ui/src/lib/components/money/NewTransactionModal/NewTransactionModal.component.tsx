@@ -1,4 +1,5 @@
 import Modal from 'react-modal'
+import { ButtonTransactionType } from '../ButtonTransactionType'
 import * as S from './NewTransactionModal.styles'
 
 export interface NewTransactionModalProps {
@@ -29,6 +30,12 @@ export const NewTransactionModal = ({
           <h2>New Transaction</h2>
           <input type="text" placeholder="Title" />
           <input type="number" placeholder="Value" />
+
+          <div>
+            <ButtonTransactionType type={'income'} />
+            <ButtonTransactionType type={'outcome'} />
+          </div>
+
           <input type="text" placeholder="Category" />
 
           <button type="submit">Register</button>

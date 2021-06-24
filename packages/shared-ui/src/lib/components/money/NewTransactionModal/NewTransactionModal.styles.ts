@@ -76,6 +76,15 @@ export const Form = styled.div`
         filter: brightness(0.8);
       }
     }
+
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 0.5rem;
+      margin: 1rem 0;
+    }
   `}
 `
 

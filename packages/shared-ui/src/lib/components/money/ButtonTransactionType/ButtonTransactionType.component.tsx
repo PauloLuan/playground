@@ -28,12 +28,12 @@ export const ButtonTransactionType = ({
   testId = 'ButtonTransactionType'
 }: ButtonTransactionTypeProps) => {
   return (
-    <S.Container data-testid={testId}>
+    <>
       {type === 'income' ? (
         <IncomeButton type={type} />
       ) : (
         <DonationButton type={type} />
       )}
-    </S.Container>
+    </>
   )
 }

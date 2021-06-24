@@ -1,14 +1,8 @@
 import styled, { css } from 'styled-components'
+import { darken } from 'polished'
 import { ButtonTransactionTypeProps } from '.'
 
 type ButtonType = Pick<ButtonTransactionTypeProps, 'type'>
-
-export const Container = styled.div`
-  ${({ theme }) => css`
-    height: 7rem;
-    width: 12rem;
-  `}
-`
 
 export const ButtonTransaction = styled.button`
   ${({ theme, type }) => css`
@@ -18,16 +12,17 @@ export const ButtonTransaction = styled.button`
     font-size: 1.2rem;
 
     color: ${type === 'income' ? 'green' : 'red'};
-    height: 100%;
-    width: 100%;
 
-    background: ${theme.colors.mindingoShape};
-    border: 0;
+    background: transparent;
+    border: 2px solid ${theme.colors.mindingoBorder};
+
+    height: 4rem;
 
     transition: ${theme.transition.default};
 
     &:hover {
-      filter: brightness(90%);
+      /* filter: brightness(50%); */
+      border-color: ${darken(0.2, theme.colors.mindingoBorder)};
     }
 
     svg {
