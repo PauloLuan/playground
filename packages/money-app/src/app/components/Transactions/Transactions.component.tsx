@@ -1,4 +1,6 @@
-import { TransactionTable } from '@pauloluan/shared-ui'
+import { money } from '@pauloluan/shared-ui'
+const { TransactionTable } = money
+
 import * as S from './Transactions.styles'
 
 export interface TransactionsProps {
