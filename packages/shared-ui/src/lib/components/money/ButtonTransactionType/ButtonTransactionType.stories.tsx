@@ -14,6 +14,26 @@ export const DonationButton: Story<ButtonTransactionTypeProps> = (args) => (
   <ButtonTransactionType {...args} transactionType={'donation'} />
 )
 
+export const SelectedDonationButton: Story<ButtonTransactionTypeProps> = (
+  args
+) => (
+  <ButtonTransactionType
+    {...args}
+    isSelected={true}
+    transactionType={'donation'}
+  />
+)
+
 export const IncomeButton: Story<ButtonTransactionTypeProps> = (args) => (
   <ButtonTransactionType {...args} transactionType={'income'} />
+)
+
+export const SelectedIncomeButton: Story<ButtonTransactionTypeProps> = (
+  args
+) => (
+  <ButtonTransactionType
+    {...args}
+    isSelected={true}
+    transactionType={'income'}
+  />
 )
