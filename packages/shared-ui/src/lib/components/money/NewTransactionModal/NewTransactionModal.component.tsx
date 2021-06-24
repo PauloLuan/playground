@@ -32,8 +32,8 @@ export const NewTransactionModal = ({
           <input type="number" placeholder="Value" />
 
           <div>
-            <ButtonTransactionType type={'income'} />
-            <ButtonTransactionType type={'outcome'} />
+            <ButtonTransactionType transactionType={'income'} />
+            <ButtonTransactionType transactionType={'outcome'} />
           </div>
 
           <input type="text" placeholder="Category" />

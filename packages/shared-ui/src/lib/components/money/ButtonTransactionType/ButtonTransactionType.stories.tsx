@@ -11,9 +11,9 @@ export default {
 } as Meta
 
 export const DonationButton: Story<ButtonTransactionTypeProps> = (args) => (
-  <ButtonTransactionType {...args} type={'donation'} />
+  <ButtonTransactionType {...args} transactionType={'donation'} />
 )
 
 export const IncomeButton: Story<ButtonTransactionTypeProps> = (args) => (
-  <ButtonTransactionType {...args} type={'income'} />
+  <ButtonTransactionType {...args} transactionType={'income'} />
 )

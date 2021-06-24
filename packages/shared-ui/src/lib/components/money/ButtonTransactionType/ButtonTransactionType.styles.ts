@@ -2,16 +2,16 @@ import styled, { css } from 'styled-components'
 import { darken } from 'polished'
 import { ButtonTransactionTypeProps } from '.'
 
-type ButtonType = Pick<ButtonTransactionTypeProps, 'type'>
+type ButtonType = Pick<ButtonTransactionTypeProps, 'transactionType'>
 
-export const ButtonTransaction = styled.button`
-  ${({ theme, type }) => css`
+export const ButtonTransaction = styled.button<ButtonType>`
+  ${({ theme, transactionType }) => css`
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
 
-    color: ${type === 'income' ? 'green' : 'red'};
+    color: ${transactionType === 'income' ? 'green' : 'red'};
 
     background: transparent;
     border: 2px solid ${theme.colors.mindingoBorder};

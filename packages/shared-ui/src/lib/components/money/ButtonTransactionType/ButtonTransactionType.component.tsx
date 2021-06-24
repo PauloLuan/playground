@@ -2,21 +2,21 @@ import * as S from './ButtonTransactionType.styles'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 
 export interface ButtonTransactionTypeProps {
-  type: 'income' | 'donation'
+  transactionType: 'income' | 'donation'
   testId?: string
 }
 
-const IncomeButton = ({ type }: ButtonTransactionTypeProps) => (
+const IncomeButton = ({ transactionType }: ButtonTransactionTypeProps) => (
   <>
-    <S.ButtonTransaction type={type}>
+    <S.ButtonTransaction transactionType={transactionType}>
       <FaArrowUp />
       <span>Income</span>
     </S.ButtonTransaction>
   </>
 )
-const DonationButton = ({ type }: ButtonTransactionTypeProps) => (
+const DonationButton = ({ transactionType }: ButtonTransactionTypeProps) => (
   <>
-    <S.ButtonTransaction type={type}>
+    <S.ButtonTransaction transactionType={transactionType}>
       <FaArrowDown />
       <span>Donation</span>
     </S.ButtonTransaction>
@@ -24,15 +24,15 @@ const DonationButton = ({ type }: ButtonTransactionTypeProps) => (
 )
 
 export const ButtonTransactionType = ({
-  type,
+  transactionType,
   testId = 'ButtonTransactionType'
 }: ButtonTransactionTypeProps) => {
   return (
     <>
-      {type === 'income' ? (
-        <IncomeButton type={type} />
+      {transactionType === 'income' ? (
+        <IncomeButton transactionType={transactionType} />
       ) : (
-        <DonationButton type={type} />
+        <DonationButton transactionType={transactionType} />
       )}
     </>
   )
