@@ -1,4 +1,4 @@
-import { darken, lighten } from 'polished'
+import { darken, transparentize } from 'polished'
 import { CgCloseO } from 'react-icons/cg'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { ButtonTransactionTypeProps } from '.'
@@ -112,8 +112,8 @@ export const TransactionButton = styled.button<ButtonType>`
     color: ${transactionType === 'income' ? 'green' : 'red'};
 
     background: ${isSelected
-      ? lighten(
-          0.4,
+      ? transparentize(
+          0.9,
           transactionType === 'income' ? theme.colors.mindingoGreen : 'red'
         )
       : 'transparent'};
