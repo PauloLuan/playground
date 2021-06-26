@@ -35,6 +35,8 @@ export const NewTransactionModal = ({
       currentTransactionType,
       category
     }
+
+    console.log(data)
   }
 
   return (
@@ -66,6 +68,7 @@ export const NewTransactionModal = ({
 
           <div>
             <S.TransactionButton
+              type="button"
               onClick={() => setCurrentTransactionType('income')}
               isSelected={currentTransactionType === 'income'}
               transactionType={'income'}
@@ -74,6 +77,7 @@ export const NewTransactionModal = ({
               <span>Income</span>
             </S.TransactionButton>
             <S.TransactionButton
+              type="button"
               onClick={() => setCurrentTransactionType('donation')}
               isSelected={currentTransactionType === 'donation'}
               transactionType={'donation'}
