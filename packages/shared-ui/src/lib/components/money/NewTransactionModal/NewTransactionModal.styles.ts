@@ -1,5 +1,7 @@
-import styled, { createGlobalStyle, css } from 'styled-components'
+import { darken, lighten } from 'polished'
 import { CgCloseO } from 'react-icons/cg'
+import styled, { createGlobalStyle, css } from 'styled-components'
+import { ButtonTransactionTypeProps } from '.'
 
 export const CustomTransactionModalStyles = createGlobalStyle`
   ${({ theme }) => css`
@@ -95,4 +97,42 @@ export const CloseButton = styled(CgCloseO)`
   height: 1.5rem;
   width: 1.5rem;
   cursor: pointer;
+`
+
+type ButtonType = Omit<ButtonTransactionTypeProps, 'testId'>
+
+export const TransactionButton = styled.button<ButtonType>`
+  ${({ theme, isSelected, transactionType }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    height: 4rem;
+
+    color: ${transactionType === 'income' ? 'green' : 'red'};
+
+    background: ${isSelected
+      ? lighten(
+          0.4,
+          transactionType === 'income' ? theme.colors.mindingoGreen : 'red'
+        )
+      : 'transparent'};
+
+    border: 2px solid ${theme.colors.mindingoBorder};
+
+    transition: ${theme.transition.default};
+
+    &:hover {
+      border-color: ${darken(0.2, theme.colors.mindingoBorder)};
+    }
+
+    svg {
+      border-radius: 50%;
+      border: 2px solid;
+      margin-right: 10px;
+    }
+
+    span {
+    }
+  `}
 `

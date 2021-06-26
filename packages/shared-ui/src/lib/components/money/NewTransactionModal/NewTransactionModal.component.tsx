@@ -1,11 +1,17 @@
+import { useState } from 'react'
 import Modal from 'react-modal'
-import { ButtonTransactionType } from '../ButtonTransactionType'
+import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 import * as S from './NewTransactionModal.styles'
-
 export interface NewTransactionModalProps {
   testId?: string
   newTransactionModalIsOpen: boolean
   handleCloseModal: () => void
+}
+
+export interface ButtonTransactionTypeProps {
+  transactionType: 'income' | 'donation'
+  isSelected?: boolean
+  testId?: string
 }
 
 export const NewTransactionModal = ({
@@ -13,6 +19,8 @@ export const NewTransactionModal = ({
   newTransactionModalIsOpen,
   handleCloseModal
 }: NewTransactionModalProps) => {
+  const [currentTransactionType, setCurrentTransactionType] = useState('')
+
   return (
     <>
       <S.CustomTransactionModalStyles />
@@ -32,8 +40,22 @@ export const NewTransactionModal = ({
           <input type="number" placeholder="Value" />
 
           <div>
-            <ButtonTransactionType transactionType={'income'} />
-            <ButtonTransactionType transactionType={'donation'} />
+            <S.TransactionButton
+              onClick={() => setCurrentTransactionType('income')}
+              isSelected={currentTransactionType === 'income'}
+              transactionType={'income'}
+            >
+              <FaArrowUp />
+              <span>Income</span>
+            </S.TransactionButton>
+            <S.TransactionButton
+              onClick={() => setCurrentTransactionType('donation')}
+              isSelected={currentTransactionType === 'donation'}
+              transactionType={'donation'}
+            >
+              <FaArrowDown />
+              <span>Donation</span>
+            </S.TransactionButton>
           </div>
 
           <input type="text" placeholder="Category" />
