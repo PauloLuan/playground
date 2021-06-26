@@ -1,5 +1,4 @@
-import { money } from '@pauloluan/shared-ui'
-const { SummaryCard } = money
+import { SummaryCard } from '../'
 import * as S from './Summary.styles'
 
 export interface SummaryProps {

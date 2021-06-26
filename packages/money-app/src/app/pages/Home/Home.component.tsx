@@ -1,8 +1,11 @@
-import { money } from '@pauloluan/shared-ui'
-import { Summary, Transactions } from '../../components'
+import {
+  Header,
+  NewTransactionModal,
+  Summary,
+  Transactions,
+  useNewTransactionModal
+} from '../../components'
 import * as S from './Home.styles'
-const { Header, NewTransactionModal, useNewTransactionModal } = money
-
 export interface HomeProps {
   testId?: string
 }

@@ -1,5 +1,4 @@
-import { money } from '@pauloluan/shared-ui'
-const { TransactionTable } = money
+import { TransactionTable } from '../'
 
 import * as S from './Transactions.styles'
 

@@ -2,10 +2,11 @@ import { useState, SyntheticEvent } from 'react'
 import Modal from 'react-modal'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 import * as S from './NewTransactionModal.styles'
+
 export interface NewTransactionModalProps {
   testId?: string
   newTransactionModalIsOpen: boolean
-  handleCloseModal: () => void
+  handleCloseModal?: () => void
 }
 
 export interface ButtonTransactionTypeProps {
@@ -26,19 +27,18 @@ export const NewTransactionModal = ({
 
   const _handleFormSubmit = (event: SyntheticEvent) => {
     event.preventDefault()
-    console.log({
+    const data = {
       title,
       amount,
       currentTransactionType,
       category
-    })
+    }
   }
 
   return (
     <>
       <S.CustomTransactionModalStyles />
       <Modal
-        data-testid={testId}
         isOpen={newTransactionModalIsOpen}
         onRequestClose={handleCloseModal}
         contentLabel="Example Modal"
@@ -47,7 +47,7 @@ export const NewTransactionModal = ({
       >
         <S.CloseButton onClick={handleCloseModal} />
 
-        <S.Form onSubmit={_handleFormSubmit}>
+        <S.Form data-testid={testId} onSubmit={_handleFormSubmit}>
           <h2>New Transaction</h2>
           <input
             value={title}

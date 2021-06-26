@@ -1,2 +1,6 @@
+export * from './Header'
+export * from './NewTransactionModal'
+export * from './SummaryCard'
+export * from './TransactionTable'
 export * from './Summary'
 export * from './Transactions'
