@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components'
 import { theme, CSSReset } from '@pauloluan/shared-ui'
 
-import { GlobalStyles } from './styles/global'
+// import { GlobalStyles } from './styles/global'
 import { Routes } from './routes'
 
 import { startMirage } from '../fake-backend/users'
@@ -12,7 +12,7 @@ export function App() {
     <ThemeProvider theme={theme}>
       <Routes />
       <CSSReset />
-      <GlobalStyles />
+      {/* <GlobalStyles />/ */}
     </ThemeProvider>
   )
 }

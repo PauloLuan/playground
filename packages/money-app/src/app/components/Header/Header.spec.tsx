@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from '@pauloluan/shared-ui'
+import { renderWithTheme } from '../../../utils/test/helpers'
 
 import { Header } from '.'
 // import theme from '../Theme'

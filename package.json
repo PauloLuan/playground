@@ -106,6 +106,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "framer-motion": "4.1.17",
     "jest": "^27.0.5",
+    "jest-environment-jsdom": "^27.0.5",
     "jest-styled-components": "^7.0.4",
     "lerna": "^4.0.0",
     "lint-staged": "^11.0.0",
