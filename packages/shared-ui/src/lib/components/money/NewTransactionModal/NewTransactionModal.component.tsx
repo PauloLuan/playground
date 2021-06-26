@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, SyntheticEvent } from 'react'
 import Modal from 'react-modal'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 import * as S from './NewTransactionModal.styles'
@@ -19,7 +19,20 @@ export const NewTransactionModal = ({
   newTransactionModalIsOpen,
   handleCloseModal
 }: NewTransactionModalProps) => {
+  const [title, setTitle] = useState('')
+  const [amount, setAmount] = useState(0)
   const [currentTransactionType, setCurrentTransactionType] = useState('')
+  const [category, setCategory] = useState('')
+
+  const _handleFormSubmit = (event: SyntheticEvent) => {
+    event.preventDefault()
+    console.log({
+      title,
+      amount,
+      currentTransactionType,
+      category
+    })
+  }
 
   return (
     <>
@@ -34,10 +47,20 @@ export const NewTransactionModal = ({
       >
         <S.CloseButton onClick={handleCloseModal} />
 
-        <S.Form>
+        <S.Form onSubmit={_handleFormSubmit}>
           <h2>New Transaction</h2>
-          <input type="text" placeholder="Title" />
-          <input type="number" placeholder="Value" />
+          <input
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
+            type="text"
+            placeholder="Title"
+          />
+          <input
+            value={amount}
+            onChange={(event) => setAmount(+event.target.value)}
+            type="number"
+            placeholder="Value"
+          />
 
           <div>
             <S.TransactionButton
@@ -58,7 +81,12 @@ export const NewTransactionModal = ({
             </S.TransactionButton>
           </div>
 
-          <input type="text" placeholder="Category" />
+          <input
+            value={category}
+            onChange={(event) => setCategory(event.target.value)}
+            type="text"
+            placeholder="Category"
+          />
 
           <button type="submit">Register</button>
         </S.Form>

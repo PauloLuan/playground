@@ -30,7 +30,7 @@ export const CustomTransactionModalStyles = createGlobalStyle`
   `}
 `
 
-export const Form = styled.div`
+export const Form = styled.form`
   ${({ theme }) => css`
     h2 {
       color: ${theme.colors.mindingoTextTitle};
