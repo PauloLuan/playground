@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export const useNewTransactionModal = () => {
   const [newTransactionModalIsOpen, setNewTransactionModalIsOpen] =
-    useState(true)
+    useState(false)
 
   const handleOpenModal = () => {
     setNewTransactionModalIsOpen(true)
