@@ -15,6 +15,8 @@ export interface ButtonTransactionTypeProps {
   testId?: string
 }
 
+Modal.setAppElement('#root')
+
 export const NewTransactionModal = ({
   testId = 'NewTransactionModal',
   newTransactionModalIsOpen,
