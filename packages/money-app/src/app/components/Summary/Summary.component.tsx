@@ -10,7 +10,7 @@ export const Summary = ({ testId = 'Summary' }: SummaryProps) => {
   return (
     <S.Container data-testid={testId}>
       <SummaryCard type="income" value={100} />
-      <SummaryCard type="outcome" value={100} />
+      <SummaryCard type="donation" value={100} />
       <SummaryCard type="total" value={200} />
     </S.Container>
   )

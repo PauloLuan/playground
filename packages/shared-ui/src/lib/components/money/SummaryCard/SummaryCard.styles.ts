@@ -23,7 +23,7 @@ export const Container = styled.div<SummaryPickedProps>`
       switch (type) {
         case 'income':
           return theme.colors.mindingoGreen
-        case 'outcome':
+        case 'donation':
           return theme.colors.mindingoRed
         case 'total':
           return theme.colors.mindingoShape

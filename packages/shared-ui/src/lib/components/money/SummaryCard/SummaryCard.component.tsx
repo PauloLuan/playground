@@ -2,7 +2,7 @@ import * as S from './SummaryCard.styles'
 
 export interface SummaryCardProps {
   testId?: string
-  type: 'income' | 'outcome' | 'total'
+  type: 'income' | 'donation' | 'total'
   value: number
 }
 
@@ -20,10 +20,10 @@ export const SummaryCard = ({
     <S.Container type={type} data-testid={testId}>
       <S.Header type={type}>
         {type === 'income' && <span>Incomes</span>}
-        {type === 'outcome' && <span>Donations</span>}
+        {type === 'donation' && <span>Donations</span>}
         {type === 'total' && <span>Total</span>}
         {type === 'income' && <S.UpIcon />}
-        {type === 'outcome' && <S.DownIcon />}
+        {type === 'donation' && <S.DownIcon />}
         {type === 'total' && <S.MoneyIcon />}
       </S.Header>
       <strong>{formattedMoneyValue}</strong>

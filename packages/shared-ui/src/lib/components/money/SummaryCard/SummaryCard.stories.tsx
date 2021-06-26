@@ -14,7 +14,7 @@ export const IncomeSummary: Story<SummaryCardProps> = (args) => (
 )
 
 export const OutcomeSummary: Story<SummaryCardProps> = (args) => (
-  <SummaryCard {...args} type="outcome" value={1250} />
+  <SummaryCard {...args} type="donation" value={1250} />
 )
 
 export const TotalSummary: Story<SummaryCardProps> = (args) => (
