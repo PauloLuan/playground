@@ -6,6 +6,6 @@ declare module 'transaction' {
     amount: number
     category?: 'Mindingo' | 'ONG' | 'Institute'
     transactionCategory: 'income' | 'donation'
-    createdAt: Date
+    createdAt?: Date
   }
 }

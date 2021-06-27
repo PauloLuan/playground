@@ -4,7 +4,7 @@ import { theme, CSSReset } from '@pauloluan/shared-ui'
 import { GlobalStyles } from './styles/global'
 import { Routes } from './routes'
 
-import { startMirage } from '../fake-backend/users'
+import { startMirage } from '../fake-backend/transactions'
 startMirage()
 
 export function App() {
