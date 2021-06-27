@@ -16,8 +16,8 @@ export interface ButtonTransactionTypeProps {
   testId?: string
 }
 
-const IS_TEST = process.env.NODE_ENV !== 'test'
-IS_TEST && Modal.setAppElement('#root')
+const NOT_TEST = process.env.NODE_ENV !== 'test'
+NOT_TEST && Modal.setAppElement('#root')
 
 export const NewTransactionModal = ({
   testId = 'NewTransactionModal',
