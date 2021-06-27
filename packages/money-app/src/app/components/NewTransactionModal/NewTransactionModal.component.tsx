@@ -2,6 +2,7 @@ import { useState, SyntheticEvent } from 'react'
 import Modal from 'react-modal'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 import * as S from './NewTransactionModal.styles'
+import { api } from '../../services/axios'
 
 export interface NewTransactionModalProps {
   testId?: string
@@ -28,7 +29,7 @@ export const NewTransactionModal = ({
   const [currentTransactionType, setCurrentTransactionType] = useState('')
   const [category, setCategory] = useState('')
 
-  const _handleFormSubmit = (event: SyntheticEvent) => {
+  const _handleFormSubmit = async (event: SyntheticEvent) => {
     event.preventDefault()
     const data = {
       title,
@@ -37,7 +38,7 @@ export const NewTransactionModal = ({
       category
     }
 
-    console.log(data)
+    await api.post('/transactions', data)
   }
 
   return (
