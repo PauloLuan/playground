@@ -1,16 +1,8 @@
+import { TransactionType } from 'transaction'
 import * as S from './TransactionTable.styles'
 
 export interface TransactionTableProps {
   testId?: string
-}
-
-export type TransactionType = {
-  _id: string | number
-  name: string
-  amount: number
-  category?: 'Mindingo' | 'ONG' | 'Institute'
-  transactionCategory: 'income' | 'donation'
-  createdAt: Date
 }
 
 export const TransactionTable = ({
