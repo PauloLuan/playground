@@ -1,5 +1,5 @@
 import { createServer, Model } from 'miragejs'
-import { data } from './transaction-mock-data'
+import { data as transactions } from './transaction-mock-data'
 
 const startMirage = () => {
   createServer({
@@ -7,12 +7,17 @@ const startMirage = () => {
       transaction: Model
     },
 
+    seeds(server) {
+      server.db.loadData({
+        transactions
+      })
+    },
+
     routes() {
       this.namespace = 'api'
 
       this.get('/transactions', () => {
-        return data
-        // return this.schema.all('transaction')
+        return this.schema.all('transaction')
       })
 
       this.post('/transactions', (_, request) => {

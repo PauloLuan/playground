@@ -14,11 +14,8 @@ export const TransactionTable = ({
 
   useEffect(() => {
     const fetchData = async () => {
-      const remoteTransactions = await api.get<TransactionType[]>(
-        '/transactions'
-      )
-
-      setTransactions(remoteTransactions.data)
+      const remoteTransactions = await api.get('/transactions')
+      setTransactions(remoteTransactions.data.transactions)
     }
 
     fetchData()
