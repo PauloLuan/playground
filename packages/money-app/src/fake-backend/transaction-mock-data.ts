@@ -14,7 +14,7 @@ export const data: TransactionType[] = [
     amount: 789,
     category: 'Mindingo',
     transactionCategory: 'donation',
-    createdAt: null
+    createdAt: undefined
   },
   {
     _id: 3,

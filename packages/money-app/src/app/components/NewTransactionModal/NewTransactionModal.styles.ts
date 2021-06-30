@@ -38,18 +38,18 @@ export const Form = styled.form`
       margin-bottom: 2rem;
     }
 
-    input {
+    input, select {
       display: flex;
       flex-direction: column;
       width: 100%;
       height: 4rem;
-      padding: 0 1rem;
+      padding: 1rem;
 
       border: 1px solid ${theme.colors.mindingoBorder};
       border-radius: 0.5rem;
       background: ${theme.colors.mindingoFormBackground}
 
-      font-weight: 400;
+      font-weight: 600;
       font-size: 1rem;
 
       &::placeholder {

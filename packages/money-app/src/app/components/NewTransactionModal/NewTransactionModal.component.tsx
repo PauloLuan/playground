@@ -3,6 +3,7 @@ import Modal from 'react-modal'
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
 import * as S from './NewTransactionModal.styles'
 import { api } from '../../services/axios'
+import { TransactionType } from 'transaction'
 
 export interface NewTransactionModalProps {
   testId?: string
@@ -24,18 +25,19 @@ export const NewTransactionModal = ({
   newTransactionModalIsOpen,
   handleCloseModal
 }: NewTransactionModalProps) => {
-  const [title, setTitle] = useState('')
+  const [name, setName] = useState('')
   const [amount, setAmount] = useState(0)
-  const [currentTransactionType, setCurrentTransactionType] = useState('')
+  const [transactionCategory, setTransactionCategory] = useState('')
   const [category, setCategory] = useState('')
 
   const _handleFormSubmit = async (event: SyntheticEvent) => {
     event.preventDefault()
-    const data = {
-      title,
+    const data: TransactionType = {
+      name,
       amount,
-      currentTransactionType,
-      category
+      transactionCategory,
+      category,
+      createdAt: new Date()
     }
 
     await api.post('/transactions', data)
@@ -56,10 +58,10 @@ export const NewTransactionModal = ({
         <S.Form data-testid={testId} onSubmit={_handleFormSubmit}>
           <h2>New Transaction</h2>
           <input
-            value={title}
-            onChange={(event) => setTitle(event.target.value)}
+            value={name}
+            onChange={(event) => setName(event.target.value)}
             type="text"
-            placeholder="Title"
+            placeholder="Donator Name"
           />
           <input
             value={amount}
@@ -71,8 +73,8 @@ export const NewTransactionModal = ({
           <div>
             <S.TransactionButton
               type="button"
-              onClick={() => setCurrentTransactionType('income')}
-              isSelected={currentTransactionType === 'income'}
+              onClick={() => setTransactionCategory('income')}
+              isSelected={transactionCategory === 'income'}
               transactionType={'income'}
             >
               <FaArrowUp />
@@ -80,8 +82,8 @@ export const NewTransactionModal = ({
             </S.TransactionButton>
             <S.TransactionButton
               type="button"
-              onClick={() => setCurrentTransactionType('donation')}
-              isSelected={currentTransactionType === 'donation'}
+              onClick={() => setTransactionCategory('donation')}
+              isSelected={transactionCategory === 'donation'}
               transactionType={'donation'}
             >
               <FaArrowDown />
@@ -89,12 +91,15 @@ export const NewTransactionModal = ({
             </S.TransactionButton>
           </div>
 
-          <input
+          <select
             value={category}
             onChange={(event) => setCategory(event.target.value)}
-            type="text"
             placeholder="Category"
-          />
+          >
+            <option value="Mindingo">Mindingo</option>
+            <option value="ONG">ONG</option>
+            <option value="Institute">Institute</option>
+          </select>
 
           <button type="submit">Register</button>
         </S.Form>
