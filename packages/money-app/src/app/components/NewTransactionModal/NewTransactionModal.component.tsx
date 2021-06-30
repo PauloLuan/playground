@@ -32,6 +32,13 @@ export const NewTransactionModal = ({
 
   const { addTransaction } = useContext(TransactionsContext)
 
+  const _clearState = () => {
+    setName('')
+    setAmount(0)
+    setTransactionCategory('')
+    setCategory('')
+  }
+
   const _handleFormSubmit = async (event: SyntheticEvent) => {
     event.preventDefault()
     const data: TransactionType = {
@@ -42,9 +49,9 @@ export const NewTransactionModal = ({
       createdAt: new Date()
     }
 
-    // await api.post('/transactions', data)
-
     addTransaction(data)
+    _clearState()
+    handleCloseModal()
   }
 
   return (

@@ -1,6 +1,6 @@
-import { api } from '../services/axios'
 import { createContext, useEffect, useState } from 'react'
 import { TransactionType } from 'transaction'
+import { api } from '../services/axios'
 
 interface TransactionsProviderProps {
   children: React.ReactNode
@@ -8,7 +8,7 @@ interface TransactionsProviderProps {
 
 interface TransactionsContextData {
   transactions: TransactionType[]
-  addTransaction: (data: TransactionType) => void
+  addTransaction: (data: TransactionType) => Promise<void>
 }
 
 export const TransactionsContext = createContext<TransactionsContextData>(
@@ -29,7 +29,9 @@ export const TransactionsProvider = ({
     fetchData()
   }, [])
 
-  const addTransaction = (data: TransactionType) => {
+  const addTransaction = async (data: TransactionType) => {
+    await api.post('/transactions', data)
+
     setTransactions([...transactions, data])
   }
 
