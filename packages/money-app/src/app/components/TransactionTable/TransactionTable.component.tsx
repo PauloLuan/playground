@@ -1,5 +1,4 @@
-import { TransactionsContext } from '../../providers'
-import { useContext } from 'react'
+import { useTransactions } from '../../providers'
 import * as S from './TransactionTable.styles'
 
 export interface TransactionTableProps {
@@ -9,7 +8,7 @@ export interface TransactionTableProps {
 export const TransactionTable = ({
   testId = 'TransactionTable'
 }: TransactionTableProps) => {
-  const { transactions } = useContext(TransactionsContext)
+  const { transactions } = useTransactions()
 
   return (
     <S.Container>

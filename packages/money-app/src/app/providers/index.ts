@@ -1,1 +1,1 @@
-export * from './TransactionsProvider'
+export * from './useTransactions'

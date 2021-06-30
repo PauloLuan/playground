@@ -1,8 +1,8 @@
-import { TransactionsContext } from '../../providers'
-import { SyntheticEvent, useContext, useState } from 'react'
+import { SyntheticEvent, useState } from 'react'
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa'
 import Modal from 'react-modal'
 import { TransactionType } from 'transaction'
+import { useTransactions } from '../../providers'
 import * as S from './NewTransactionModal.styles'
 
 export interface NewTransactionModalProps {
@@ -35,7 +35,7 @@ export const NewTransactionModal = ({
   const [transactionCategory, setTransactionCategory] = useState('')
   const [category, setCategory] = useState('')
 
-  const { addTransaction } = useContext(TransactionsContext)
+  const { addTransaction } = useTransactions()
 
   const _clearState = () => {
     setName('')

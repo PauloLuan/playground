@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 import { TransactionType } from 'transaction'
 import { api } from '../services/axios'
 
@@ -16,7 +16,7 @@ interface TransactionsContextData {
   addTransaction: (data: TransactionFormType) => Promise<void>
 }
 
-export const TransactionsContext = createContext<TransactionsContextData>(
+const TransactionsContext = createContext<TransactionsContextData>(
   {} as TransactionsContextData
 )
 
@@ -45,4 +45,9 @@ export const TransactionsProvider = ({
       {children}
     </TransactionsContext.Provider>
   )
+}
+
+export const useTransactions = () => {
+  const context = useContext(TransactionsContext)
+  return context
 }

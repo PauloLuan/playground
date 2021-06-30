@@ -1,7 +1,6 @@
-import { useContext } from 'react'
 import { TransactionType } from 'transaction'
 import { SummaryCard } from '../'
-import { TransactionsContext } from '../../providers'
+import { useTransactions } from '../../providers'
 import * as S from './Summary.styles'
 
 export interface SummaryProps {
@@ -32,7 +31,7 @@ const calculateTotals = (transactions: TransactionType[]) => {
 }
 
 export const Summary = ({ testId = 'Summary' }: SummaryProps) => {
-  const { transactions } = useContext(TransactionsContext)
+  const { transactions } = useTransactions()
 
   const { incomes, donations, total } = calculateTotals(transactions)
 
