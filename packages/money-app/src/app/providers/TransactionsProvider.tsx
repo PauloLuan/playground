@@ -8,6 +8,7 @@ interface TransactionsProviderProps {
 
 interface TransactionsContextData {
   transactions: TransactionType[]
+  addTransaction: (data: TransactionType) => void
 }
 
 export const TransactionsContext = createContext<TransactionsContextData>(
@@ -28,8 +29,12 @@ export const TransactionsProvider = ({
     fetchData()
   }, [])
 
+  const addTransaction = (data: TransactionType) => {
+    setTransactions([...transactions, data])
+  }
+
   return (
-    <TransactionsContext.Provider value={{ transactions }}>
+    <TransactionsContext.Provider value={{ transactions, addTransaction }}>
       {children}
     </TransactionsContext.Provider>
   )
