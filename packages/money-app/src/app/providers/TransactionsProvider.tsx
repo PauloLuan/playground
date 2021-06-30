@@ -6,9 +6,14 @@ interface TransactionsProviderProps {
   children: React.ReactNode
 }
 
+type TransactionFormType = Pick<
+  TransactionType,
+  'name' | 'amount' | 'transactionCategory' | 'category'
+>
+
 interface TransactionsContextData {
   transactions: TransactionType[]
-  addTransaction: (data: TransactionType) => Promise<void>
+  addTransaction: (data: TransactionFormType) => Promise<void>
 }
 
 export const TransactionsContext = createContext<TransactionsContextData>(
@@ -29,10 +34,10 @@ export const TransactionsProvider = ({
     fetchData()
   }, [])
 
-  const addTransaction = async (data: TransactionType) => {
-    await api.post('/transactions', data)
-
-    setTransactions([...transactions, data])
+  const addTransaction = async (data: TransactionFormType) => {
+    const response = await api.post('/transactions', data)
+    const { transaction } = response.data
+    setTransactions([...transactions, transaction])
   }
 
   return (

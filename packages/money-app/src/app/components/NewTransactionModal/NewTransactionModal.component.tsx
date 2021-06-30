@@ -17,6 +17,11 @@ export interface ButtonTransactionTypeProps {
   testId?: string
 }
 
+type TransactionFormType = Pick<
+  TransactionType,
+  'name' | 'amount' | 'transactionCategory' | 'category'
+>
+
 const NOT_TEST = process.env.NODE_ENV !== 'test'
 NOT_TEST && Modal.setAppElement('#root')
 
@@ -41,12 +46,11 @@ export const NewTransactionModal = ({
 
   const _handleFormSubmit = async (event: SyntheticEvent) => {
     event.preventDefault()
-    const data: TransactionType = {
+    const data: TransactionFormType = {
       name,
       amount,
       transactionCategory,
-      category,
-      createdAt: new Date()
+      category
     }
 
     addTransaction(data)
