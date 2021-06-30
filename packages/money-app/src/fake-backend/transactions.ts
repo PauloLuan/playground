@@ -1,5 +1,6 @@
 import { createServer, Model } from 'miragejs'
 import { data as transactions } from './transaction-mock-data'
+import { v4 as uuidv4 } from 'uuid'
 
 const startMirage = () => {
   createServer({
@@ -21,8 +22,15 @@ const startMirage = () => {
       })
 
       this.post('/transactions', (_, request) => {
-        const data = JSON.parse(request.requestBody)
-        return this.schema.create('transaction', data)
+        const inputData = JSON.parse(request.requestBody)
+
+        const saveData = {
+          ...inputData,
+          id: uuidv4(),
+          createdAt: new Date()
+        }
+
+        return this.schema.create('transaction', saveData)
       })
     }
   })
