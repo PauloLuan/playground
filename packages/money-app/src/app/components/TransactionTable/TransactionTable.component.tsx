@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import { TransactionsContext } from '../../providers'
+import { useContext } from 'react'
 import * as S from './TransactionTable.styles'
-import { api } from '../../services/axios'
-import { TransactionType } from 'transaction'
 
 export interface TransactionTableProps {
   testId?: string
@@ -10,16 +9,7 @@ export interface TransactionTableProps {
 export const TransactionTable = ({
   testId = 'TransactionTable'
 }: TransactionTableProps) => {
-  const [transactions, setTransactions] = useState<TransactionType[]>([])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const remoteTransactions = await api.get('/transactions')
-      setTransactions(remoteTransactions.data.transactions)
-    }
-
-    fetchData()
-  }, [])
+  const { transactions } = useContext(TransactionsContext)
 
   return (
     <S.Container>
