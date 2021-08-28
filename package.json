@@ -8,7 +8,7 @@
   "scripts": {
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "postinstall": "yarn bootstrap",
-    "bootstrap": "lerna bootstrap && yarn build",
+    "bootstrap": "lerna bootstrap",
     "build": "lerna run --stream build",
     "dev": "lerna run dev --stream --parallel",
     "start": "lerna run start --stream",
