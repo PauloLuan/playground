@@ -7,8 +7,8 @@
   ],
   "scripts": {
     "generate": "yarn plop --plopfile generators/plopfile.js",
-    "postinstall": "yarn bootstrap && yarn expo:symlinks",
-    "expo:symlinks": "expo-yarn-workspaces check-workspace-dependencies",
+    "postinstall": "yarn bootstrap && yarn expo:symlinks:gambiarra",
+    "expo:symlinks:gambiarra": "node node_modules/expo/packages/expo-yarn-workspaces/bin/expo-yarn-workspaces.js check-workspace-dependencies",
     "bootstrap": "lerna bootstrap",
     "build": "lerna run --stream build",
     "dev": "lerna run dev --stream --parallel",
