@@ -2,9 +2,17 @@
   "name": "@pauloluan/playground",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/expo",
+      "**/expo/**"
+    ]
+  },
   "scripts": {
     "generate": "yarn plop --plopfile generators/plopfile.js",
     "postinstall": "yarn patch:packages && yarn bootstrap && yarn expo:symlinks",

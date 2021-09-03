@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "__generated__/AppEntry.js",
   "scripts": {
+    "postinstall": "yarn expo-yarn-workspaces postinstall",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "expo start --web",
