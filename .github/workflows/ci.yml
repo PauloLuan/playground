@@ -55,4 +55,4 @@ jobs:
       run: yarn install
 
     - name: Run the tests and generate coverage report
-      run: yarn test:ci
+      run: yarn test
